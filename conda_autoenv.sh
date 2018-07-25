@@ -40,11 +40,11 @@ function conda_autoenv() {
   then
     echo "Deactivating conda environment"
     export PIP_FORMAT=columns
-    echo "Updating conda environment.yml (and pip requirements.txt)"
-    conda env export > $CONDA_ENV_ROOT/environment.yml
-    pip freeze > $CONDA_ENV_ROOT/requirements.txt
+    # echo "Updating conda environment.yml (and pip requirements.txt)"
+    # conda env export > $CONDA_ENV_ROOT/environment.yml
+    # pip freeze > $CONDA_ENV_ROOT/requirements.txt
     CONDA_ENV_ROOT=""
-    echo "Successfully updated environment.yml and requirements.txt"
+    # echo "Successfully updated environment.yml and requirements.txt"
     source deactivate
     echo "Deactivated successfully"
   fi
